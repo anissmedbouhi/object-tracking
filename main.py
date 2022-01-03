@@ -1,4 +1,3 @@
-
 from time import process_time, perf_counter
 import cv2 as cv
 import glob
