@@ -1,20 +1,3 @@
-# Particle Filter
+# CPU parallel computing adaptive color-based particle filter for robust video object tracking
 
-This repo implements a particle filter based object tracking algorithm, file ``` test.avi``` is a demo showing tracking box and particles, our implementation referenced paper [《An adaptive color-based particle filter》](https://www.sciencedirect.com/science/article/pii/S0262885602001294)
-
- Here is the pesudocode
-
-![pesudocode](algorithm.PNG)
-
-**Prerequisets**
-
-- cv2
-- numpy
-
-To run this code, just run ```main.py``` like ```python main.py```, this will generate a series of pics in folder  ```output```, you can use some scripts to transform these pics into a video
-
-You can tune parameters in file ```ParticleFilter.py```, like particle nums, Gaussian distribution's params and color histogram's params etc.
-
-Here is one frame in the tracking process
-
-![demo](demo.jpg)
+This repository contains the code for my project called: "CPU parallel computing adaptive color-based particle filter for robust video object tracking". It presents a robust, real-time object tracking system implemented using an adaptive color-based Particle Filter. The method is inspired by [Nummiaro et al. (2002)](https://www.sciencedirect.com/science/article/pii/S0262885602001294), and enhanced with parallel computing strategies and a novel integration of clustering to manage multiple hypotheses. The system is resilient to object transformations such as scale changes, rotations, and occlusions, and supports efficient computation on both local machines and high-performance clusters. Experimental results demonstrate strong performance on challenging video sequences.
