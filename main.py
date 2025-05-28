@@ -89,13 +89,13 @@ class ParticleFilter():
         results_text.write('\nprocessing image: %04d.jpg' % (self.img_index + 1))
 
         img_first = cv.imread(self.imgs[0])
-        initial_state=state(x=425,y=220,x_dot=0.,y_dot=0.,h_x=80,h_y=35,a_dot=0.) #à changer par une initialisation avec une loi uniforme pour voir combien il faut d'itérations pour avoir quelque chose d'acceptable #x是横向的，y是纵向的，h_x与h_y分别是长方形边长的一半长度
+        initial_state=state(x=425,y=220,x_dot=0.,y_dot=0.,h_x=80,h_y=35,a_dot=0.) #à changer par une initialisation avec une loi uniforme pour voir combien il faut d'itérations pour avoir quelque chose d'acceptable
         initial_state.draw_dot(img_first,self.out_path+'/0001.jpg')
         initial_state.draw_rectangle(img_first, self.out_path+'/0001.jpg')
         self.state=initial_state # estimated state
         self.states_possible = [initial_state] # possible states, one state by cluster
         self.particles=[]
-        random_nums=np.random.normal(0,0.4,(particles_num,7))   #一个state有7个变量
+        random_nums=np.random.normal(0,0.4,(particles_num,7)) 
         self.weights = [1. / particles_num] * particles_num  #uniform weight on the particles
         self.weights_before_normalization = self.weights
         for i in range(particles_num): # à paralléliser ! Changer self.particles en dictionnaire ?
