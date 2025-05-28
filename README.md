@@ -14,7 +14,9 @@ This repository contains the code for my project called: "CPU parallel computing
   Contains helper functions.
 
 - **`makegif.py`**  
-  Converts a sequence of saved image frames into a compressed `.gif` animation for visualization.
+  Converts a sequence of saved image frames into a compressed `.gif` animation for visualizing the outputs of our model:
+  ![Demo Animation](demo4_4Nef_p224.gif)
+
 
 # Acknowledgements
 
